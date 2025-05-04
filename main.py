@@ -173,3 +173,25 @@ save_button.pack(pady=10)
 
 # ===== 启动 GUI =====
 root.mainloop()
+
+# ===== Start GUI =====
+root.mainloop()
+
+# readline() example
+print("\n=== Example: readline() ===")
+try:
+    with open("usage_log.txt", "r") as f:
+        line = f.readline()
+        print("The first line is:", line.strip())
+except FileNotFoundError:
+    print("⚠ File 'usage_log.txt' not found. Please run the app first.")
+
+# readlines() example
+print("\n=== Example: readlines() ===")
+try:
+    with open("usage_log.txt", "r") as f:
+        lines = f.readlines()
+        for idx, l in enumerate(lines):
+            print(f"Line {idx + 1}: {l.strip()}")
+except FileNotFoundError:
+    print("⚠ File 'usage_log.txt' not found. Please run the app first.")
